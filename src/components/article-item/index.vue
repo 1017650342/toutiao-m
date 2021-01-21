@@ -1,5 +1,16 @@
 <template>
-  <van-cell class="article-item">
+  <van-cell
+    class="article-item"
+    :to="{
+      //根据路由名进行跳转
+      name: 'article',
+      //传递路由动态参数
+      params: {
+        //路由名：路由路径设计的动态参数名称
+        articleId: article.art_id
+      }
+    }"
+  >
     <template #title>
       <div class="title van-multi-ellipsis--l2">
         {{ article.title }}
